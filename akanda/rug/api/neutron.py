@@ -33,7 +33,7 @@ from akanda.rug.openstack.common import log as logging
 
 LOG = logging.getLogger(__name__)
 
-# copied from Quantum source
+# copied from Neutron source
 DEVICE_OWNER_ROUTER_MGT = "network:router_management"
 DEVICE_OWNER_ROUTER_INT = "network:router_interface"
 DEVICE_OWNER_ROUTER_GW = "network:router_gateway"
@@ -266,7 +266,7 @@ class L3PluginApi(proxy.RpcProxy):
         return retval
 
 
-class Quantum(object):
+class Neutron(object):
     def __init__(self, conf):
         self.conf = conf
         self.api_client = AkandaExtClientWrapper(
