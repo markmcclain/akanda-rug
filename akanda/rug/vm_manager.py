@@ -500,6 +500,7 @@ class VmManager(object):
         return router_macs == expected_macs
 
     def _ensure_provider_ports(self, router, worker_context):
+        import pdb;pdb.set_trace()
         if router.management_port is None:
             self.log.debug('Adding management port to router')
             mgt_port = worker_context.neutron.create_router_management_port(
